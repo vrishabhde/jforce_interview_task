@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>voting system</title>
+</head>
+<body>
+  <h1>Vote for Your Favorite Candidates</h1>
+
+  <div>
+    <h2>Candidate 1</h2>
+    <p>Vote count: <span id="candidate1Count">0</span></p>
+    <button onclick="voteCandidate(1)">Vote</button>
+  </div>
+
+  <div>
+    <h2>Candidate 2</h2>
+    <p>Vote count: <span id="candidate2Count">0</span></p>
+    <button onclick="voteCandidate(2)">Vote</button>
+  </div>
+
+  <div>
+    <h2>Candidate 3</h2>
+    <p>Vote count: <span id="candidate3Count">0</span></p>
+    <button onclick="voteCandidate(3)">Vote</button>
+  </div>
+
+  <div>
+    <h2>Candidate 4</h2>
+    <p>Vote count: <span id="candidate4Count">0</span></p>
+    <button onclick="voteCandidate(4)">Vote</button>
+  </div>
+
+  <script>
+let candidate1Count = 0;
+let candidate2Count = 0;
+let candidate3Count = 0;
+let candidate4Count = 0;
+
+function updateCandidateCount(candidateNumber) {
+  if (candidateNumber === 1) {
+    document.getElementById('candidate1Count').innerText = candidate1Count;
+  } else if (candidateNumber === 2) {
+    document.getElementById('candidate2Count').innerText = candidate2Count;
+  }else if (candidateNumber === 3) {
+    document.getElementById('candidate3Count').innerText = candidate3Count;
+  }else if (candidateNumber === 4) {
+    document.getElementById('candidate4Count').innerText = candidate4Count;
+  }
+}
+
+
+function voteCandidate(candidateNumber) {
+  if (candidateNumber === 1) {
+    candidate1Count++;
+  } else if (candidateNumber === 2) {
+    candidate2Count++;
+  }else if (candidateNumber === 3) {
+    candidate3Count++;
+  }else if (candidateNumber === 4) {
+    candidate4Count++;
+  }
+  
+  updateCandidateCount(candidateNumber);
+}
+  </script>
+</body>
+</html>
